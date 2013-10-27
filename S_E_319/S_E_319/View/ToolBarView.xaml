@@ -6,7 +6,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <ToolBar>
-        <MenuItem Header="ToolBar" />
-        
+        <MenuItem Header="Thing1" />
+        <MenuItem Header="Thing2" />
+        <MenuItem Header="Thing3" />
+        <MenuItem Header="Thing4" />
     </ToolBar>
 </UserControl>
