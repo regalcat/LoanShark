@@ -60,6 +60,7 @@
     <Compile Include="Model\BookItem.cs" />
     <Compile Include="Model\ItemBaseClass.cs" />
     <Compile Include="Model\MiscItem.cs" />
+    <Compile Include="Model\TestClass.cs" />
     <Compile Include="ViewModel\MainBrowserListViewModel.cs" />
     <Compile Include="ViewModel\MainBrowserTileViewModel.cs" />
     <Compile Include="ViewModel\MainBrowserViewModelBaseClass.cs" />
