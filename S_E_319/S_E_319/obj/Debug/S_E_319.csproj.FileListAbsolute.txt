@@ -23,3 +23,6 @@ C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\
 C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\Debug\View\MenuBarView.g.cs
 C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\Debug\S_E_319_MarkupCompile.lref
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\S_E_319.exe.config
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.exe
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.pdb
