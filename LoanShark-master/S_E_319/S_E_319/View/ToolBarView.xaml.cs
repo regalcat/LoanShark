@@ -20,9 +20,16 @@ namespace S_E_319
     /// </summary>
     public partial class ToolBarView : UserControl
     {
+        
+
         public ToolBarView()
         {
             InitializeComponent();
+        }
+
+        public void LSToolbarCyclone(object sender, RoutedEventArgs e)
+        {
+            LSToolbar.Background = Brushes.PaleGoldenrod;
         }
     }
 }
