@@ -12,8 +12,8 @@
         </MenuItem>
         <MenuItem Width="60" Header="Settings">
             <MenuItem Header="Color Schemes">
-                <MenuItem Header="Loanshark Original" IsCheckable="True" Checked="Loanshark_Checked"/>
-                <MenuItem Header="Cyclone Pride" IsCheckable="True" Checked="Cyclone_Checked"/>
+                <MenuItem Header="Loanshark Original" Click="{Binding LoanShark_Clicked}"/>
+                <MenuItem Header="Cyclone Pride" Click="{Binding Cyclone_Clicked}"/>
                 
             </MenuItem>
         </MenuItem>

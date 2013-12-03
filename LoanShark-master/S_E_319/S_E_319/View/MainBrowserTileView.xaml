@@ -4,9 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:S_E_319"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+             mc:Ignorable="d" Height="300" Width="300">
+    
+    <Grid Background="{Binding BackgroundColor}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
         <!-- Listbox That Holds Tiles -->
         <ListBox 
             ItemsSource="{Binding Items}"
@@ -126,7 +130,7 @@
                                 HorizontalAlignment="Center"
                                 />
                             <TextBlock 
-                                Text="Category"
+                                Text="Genre"
                                 Grid.Row="1"
                                 Grid.Column="0"
                                 VerticalAlignment="Center"

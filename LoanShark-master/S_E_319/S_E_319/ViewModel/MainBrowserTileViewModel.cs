@@ -4,11 +4,13 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace S_E_319
 {
     class MainBrowserTileViewModel : MainBrowserViewModelBaseClass
     {
+        public Brush BackgroundColor { get; private set; }
         #region Fields and Autoproperties
 
         
@@ -26,5 +28,10 @@ namespace S_E_319
         #region Properties
 
         #endregion
+
+        public void ChangeColor(SolidColorBrush b)
+        {
+            BackgroundColor = b;
+        }
     }
 }

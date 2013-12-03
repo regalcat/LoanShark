@@ -24,11 +24,5 @@ namespace S_E_319
             InitializeComponent();
         }
 
-        //public void Cyclone_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    MenuBarView.LSMenu.Background = Brushes.IndianRed;
-        //    ToolBarView.LSToolbar.LSToolbarColorChange(Brushes.PaleGoldenrod);
-            //ToolBarView.LSToolbarColorChange(Brushes.PaleGoldenrod);
-        //}
     }
 }

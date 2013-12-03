@@ -27,9 +27,5 @@ namespace S_E_319
             InitializeComponent();
         }
 
-        public void LSToolbarCyclone(object sender, RoutedEventArgs e)
-        {
-            LSToolbar.Background = Brushes.PaleGoldenrod;
-        }
     }
 }

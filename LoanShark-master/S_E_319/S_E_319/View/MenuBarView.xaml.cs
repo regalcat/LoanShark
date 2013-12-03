@@ -30,16 +30,5 @@ namespace S_E_319
             System.Environment.Exit(0);
         }
 
-        private void Cyclone_Checked(object sender, RoutedEventArgs e)
-        {
-            LSMenu.Background = Brushes.IndianRed;
-            //ToolBarView.LSToolbarColorChange(Brushes.PaleGoldenrod);
-            
-        }
-
-        private void Loanshark_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

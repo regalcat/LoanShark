@@ -25,9 +25,19 @@ namespace S_E_319
             MenuBar = new MenuBarViewModel();
             ToolBar = new ToolBarViewModel();
             SidePanel = new SidePanelViewModel();
-            MainBrowser = new MainBrowserListViewModel();
+            MainBrowser = new MainBrowserTileViewModel();
+            
+
+
         }
 
+        
+
         #endregion
+
+        private void OnThemeChanged(EventArgs e)
+        {
+            
+        }
     }
 }
