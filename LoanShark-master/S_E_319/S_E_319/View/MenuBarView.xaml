@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Menu Name="LSMenu" Background="White">
+    <Menu Name="LSMenu" Background="{Binding BackgroundColor, TargetNullValue=White}">
         <MenuItem Header="File">
             <MenuItem Header="Exit" HorizontalAlignment="Left" Width="144.8" Click="Exit_Clicked"/>
 

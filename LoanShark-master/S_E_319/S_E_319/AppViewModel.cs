@@ -35,9 +35,12 @@ namespace S_E_319
 
         #endregion
 
-        private void OnThemeChanged(EventArgs e)
+        private void OnThemeChanged(ColorChangedEventArgs e)
         {
-            
+            ToolBar.ChangeColor(e.getBrush0());
+            MenuBar.ChangeColor(e.getBrush1());
+            SidePanel.ChangeColor(e.getBrush2());
+            MainBrowser.ChangeColor(e.getBrush3());
         }
     }
 }

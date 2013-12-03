@@ -13,6 +13,8 @@ namespace S_E_319
         {
         }
 
+        public Brush BackgroundColor { get; private set; }
+
         public event EventHandler Cyclone_Pride;
 
         public event EventHandler LoanShark;
@@ -35,8 +37,13 @@ namespace S_E_319
 
             if (handler != null)
             {
-
+                var e = new ColorChangedEventArgs(Brushes.PowderBlue, Brushes.Tan, Brushes.Navy, Brushes.LightSkyBlue);
             }
+        }
+
+        public void ChangeColor(SolidColorBrush b)
+        {
+            BackgroundColor = b;
         }
     }
 

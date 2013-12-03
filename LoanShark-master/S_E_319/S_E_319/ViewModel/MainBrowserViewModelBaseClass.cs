@@ -4,11 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace S_E_319
 {
     abstract class MainBrowserViewModelBaseClass : ViewModelBase
     {
+        public Brush BackgroundColor { get; private set; }
+
         #region Fields and Autoproperties
         private static ObservableCollection<ItemBaseClass> _items;
         #endregion
@@ -35,6 +38,10 @@ namespace S_E_319
             _items.Add(new MiscItem("Nic-nak", "Caleb", "Misc"));
         }
 
+        public void ChangeColor(SolidColorBrush b)
+        {
+            BackgroundColor = b;
+        }
         #endregion
 
     }
