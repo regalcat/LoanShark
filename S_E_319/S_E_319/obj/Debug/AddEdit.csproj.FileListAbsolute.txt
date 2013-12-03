@@ -1,0 +1,9 @@
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\bin\Debug\AddEdit.exe.config
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.csprojResolveAssemblyReference.cache
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\MainWindow.baml
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\MainWindow.g.cs
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\App.g.cs
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit_MarkupCompile.cache
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.g.resources
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.Properties.Resources.resources
+C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.csproj.GenerateResource.Cache

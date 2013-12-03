@@ -1,0 +1,34 @@
+﻿<Window x:Class="AddEdit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add/Edit Item" Height="350" Width="525">
+    <Grid Margin="0,0,2,-3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Margin="34,39,416,262">Title</TextBlock>
+            <TextBox Margin="104,38,44,262" Text="Title" Name="Title" />
+
+        <TextBlock Margin="34,76,416,225">Author</TextBlock>
+            <TextBox Margin="104,76,281,224" Text="First" Name="FirstName"/>
+            <TextBox Margin="361,76,44,224" Text="Middle" Name="MiddleName"/>
+            <TextBox Margin="239,76,159,224" Text="Last" Name="LastName"/>
+        
+        <TextBlock Margin="34,115,416,186">Genre</TextBlock>
+            <TextBox Margin="104,115,159,185" Text="Genre" Name="Genre"/>
+
+        <TextBlock Margin="372,118,78,183">Favorite</TextBlock>
+            <CheckBox Content="" HorizontalAlignment="Left" Margin="454,121,0,0" VerticalAlignment="Top" Name="Favorite"/>
+
+        <TextBlock Margin="34,158,416,143">Location</TextBlock>
+            <TextBox Margin="104,155,44,145" Text="Location" Name="Location"/>
+        
+        <TextBlock Margin="34,196,416,105">Description</TextBlock>
+            <TextBox Margin="104,196,44,64" Text="Description Here" Name="Description"/>
+        
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="106,279,0,0" VerticalAlignment="Top" Width="128" Click="SubmitClicked"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="309,279,0,0" VerticalAlignment="Top" Width="128" Click="CancelClicked"/>
+
+    </Grid>
+</Window>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace S_E_319.Properties
+namespace AddEdit.Properties
 {
 
 
