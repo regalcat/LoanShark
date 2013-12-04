@@ -35,6 +35,10 @@ namespace S_E_319
 
         #endregion
 
+        
+
+        
+
         private void OnThemeChanged(ColorChangedEventArgs e)
         {
             ToolBar.ChangeColor(e.getBrush0());
