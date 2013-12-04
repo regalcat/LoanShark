@@ -7,3 +7,4 @@ C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj
 C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.g.resources
 C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.Properties.Resources.resources
 C:\Users\Lindsay\Documents\School\User Interfaces\Loan Shark\AddEdit\AddEdit\obj\Debug\AddEdit.csproj.GenerateResource.Cache
+C:\Users\Lindsay\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\AddEdit.exe.config
