@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:S_E_319"
              mc:Ignorable="d" Height="300" Width="300">
     
-    <Grid Background="{Binding BackgroundColor}">
+    <Grid Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -14,7 +14,7 @@
         <!-- Listbox That Holds Tiles -->
         <ListBox 
             ItemsSource="{Binding Items}"
-            ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,1,0,-1">
 
             <!-- Template for wrapping -->
             <ListBox.ItemsPanel>
@@ -122,7 +122,7 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <TextBlock 
+                            <TextBlock
                                 Text="{Binding Name}"
                                 Grid.Row="0"
                                 Grid.ColumnSpan="2"

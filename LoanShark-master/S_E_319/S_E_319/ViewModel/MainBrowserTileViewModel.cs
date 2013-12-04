@@ -10,7 +10,7 @@ namespace S_E_319
 {
     class MainBrowserTileViewModel : MainBrowserViewModelBaseClass
     {
-        public Brush BackgroundColor { get; private set; }
+        //public Brush BackgroundColor { get; private set; }
         #region Fields and Autoproperties
 
         
@@ -29,9 +29,9 @@ namespace S_E_319
 
         #endregion
 
-        public void ChangeColor(SolidColorBrush b)
-        {
-            BackgroundColor = b;
-        }
+        //public void ChangeColor(SolidColorBrush b)
+        //{
+           // BackgroundColor = b;
+        //}
     }
 }

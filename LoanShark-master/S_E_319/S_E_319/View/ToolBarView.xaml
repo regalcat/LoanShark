@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <ToolBar Name="LSToolbar" Background="{Binding BackgroundColor}">
+    <ToolBar Name="LSToolbar" Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <MenuItem Header="Add" Name="LSAdd" />
     </ToolBar>
 </UserControl>
