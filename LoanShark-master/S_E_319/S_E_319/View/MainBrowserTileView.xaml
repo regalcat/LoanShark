@@ -108,9 +108,12 @@
                     </Border>
                 </DataTemplate>
                 -->
+                
                 <DataTemplate>
+                    
                     <Border Height="100" Width="200" 
                             BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray">
+                        
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition />

@@ -30,8 +30,8 @@ namespace S_E_319
         public static void GenerateList()
         {
             _items = new ObservableCollection<ItemBaseClass>();
-            _items.Add(new BookItem("Harry Potter", "J.K. Rowling", 929292, "Caleb", "Fantasy"));
-            _items.Add(new BookItem("The Bible", "Our God Almighty", 1, "Caleb", "Fantasy"));
+            _items.Add(new BookItem("Harry Potter", "J.K. Rowling", "929292", "Caleb", "Fantasy"));
+            _items.Add(new BookItem("The Bible", "Our God Almighty", "1", "Caleb", "Fantasy"));
             _items.Add(new MiscItem("Nic-nak", "Caleb", "Misc"));
         }
 

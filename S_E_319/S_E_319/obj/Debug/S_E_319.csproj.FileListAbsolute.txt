@@ -23,3 +23,28 @@ C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\
 C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\Debug\View\MenuBarView.g.cs
 C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Caleb Wehrle\Documents\Visual Studio 2012\Projects\S_E_319\S_E_319\obj\Debug\S_E_319_MarkupCompile.lref
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\S_E_319.exe.config
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.exe
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.pdb
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.csprojResolveAssemblyReference.cache
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserListView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\SidePanelView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\ToolBarView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MenuBarView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\AppView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserListView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserTileView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\SidePanelView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\ToolBarView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MenuBarView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\App.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319_MarkupCompile.cache
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319_MarkupCompile.lref
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\S_E_319.exe
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\S_E_319.pdb
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\AppView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserTileView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.g.resources
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.Properties.Resources.resources
+C:\Users\Steff\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.csproj.GenerateResource.Cache

@@ -5,9 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Menu>
+    <Menu Name="LSMenu" Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <MenuItem Header="File">
-            
+            <MenuItem Header="Exit" HorizontalAlignment="Left" Width="144.8" Click="Exit_Clicked"/>
+
+        </MenuItem>
+        <MenuItem Width="60" Header="Settings">
+            <MenuItem Header="Color Schemes">
+                <!--Temporarily commenting out the click function so the program will run. Will fix after demo.-->
+                <MenuItem Header="Loanshark Original" />
+                <!--Click="{Binding LoanShark_Clicked}"-->
+                <MenuItem Header="Cyclone Pride" />
+                <!--Click="{Binding Cyclone_Clicked}"-->
+
+            </MenuItem>
         </MenuItem>
     </Menu>
 </UserControl>

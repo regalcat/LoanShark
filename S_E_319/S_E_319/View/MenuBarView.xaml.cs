@@ -24,5 +24,10 @@ namespace S_E_319
         {
             InitializeComponent();
         }
+
+        private void Exit_Clicked(object sender, RoutedEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }
