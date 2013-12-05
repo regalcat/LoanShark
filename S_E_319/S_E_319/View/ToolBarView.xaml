@@ -6,7 +6,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <ToolBar>
-        <MenuItem Header="ToolBar" />
+        <MenuItem Header="Search" Name="TBSearch" Command="{Binding SearchCommand}" />
+        <TextBox Name="TBTextBox" Text="{Binding name, Mode=TwoWay}" Width="250" />
         
     </ToolBar>
 </UserControl>
