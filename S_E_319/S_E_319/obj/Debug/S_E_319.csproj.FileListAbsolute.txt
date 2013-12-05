@@ -29,12 +29,10 @@ C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_3
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\S_E_319.exe
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\bin\Debug\S_E_319.pdb
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.csprojResolveAssemblyReference.cache
-C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserListView.baml
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\SidePanelView.baml
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\ToolBarView.baml
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MenuBarView.baml
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\AppView.g.cs
-C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserListView.g.cs
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\MainBrowserTileView.g.cs
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\SidePanelView.g.cs
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\ToolBarView.g.cs
@@ -48,3 +46,7 @@ C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.g.resources
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.Properties.Resources.resources
 C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\S_E_319.csproj.GenerateResource.Cache
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\AddEditView.baml
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\LoanView.baml
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\AddEditView.g.cs
+C:\Users\Caleb Wehrle\Documents\GitHub\LoanShark\S_E_319\S_E_319\obj\Debug\View\LoanView.g.cs

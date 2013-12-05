@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Windows.Input;
+using System.Windows;
+using Microsoft.TeamFoundation;
+
 
 namespace S_E_319
 {
@@ -14,7 +18,7 @@ namespace S_E_319
         public MenuBarViewModel MenuBar { get; private set; }
         public ToolBarViewModel ToolBar { get; private set; }
         public SidePanelViewModel SidePanel { get; private set; }
-        public MainBrowserViewModelBaseClass MainBrowser { get; private set; }
+        public MainBrowserTileViewModel MainBrowser { get; private set; }
 
         #endregion
 
@@ -22,14 +26,15 @@ namespace S_E_319
 
         public AppViewModel()
         {
-            MainBrowserViewModelBaseClass.GenerateList();
+            MainBrowserTileViewModel.GenerateList();
             MenuBar = new MenuBarViewModel();
             ToolBar = new ToolBarViewModel();
             SidePanel = new SidePanelViewModel();
             MainBrowser = new MainBrowserTileViewModel();
-
         }
 
         #endregion
+
+
     }
 }

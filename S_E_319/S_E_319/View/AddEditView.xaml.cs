@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace S_E_319
+namespace S_E_319.View
 {
     /// <summary>
-    /// Interaction logic for MainBrowserListView.xaml
+    /// Interaction logic for AddEditView.xaml
     /// </summary>
-    public partial class MainBrowserListView : UserControl
+    public partial class AddEditView : Window
     {
-        public MainBrowserListView()
+        public AddEditView()
         {
             InitializeComponent();
         }

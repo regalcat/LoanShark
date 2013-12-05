@@ -6,6 +6,9 @@
              xmlns:local="clr-namespace:S_E_319"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
     <Grid>
         <!-- Listbox That Holds Tiles -->
         <ListBox 

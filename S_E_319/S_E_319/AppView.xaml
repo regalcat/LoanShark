@@ -13,9 +13,6 @@
         <DataTemplate DataType="{x:Type local:SidePanelViewModel}">
             <local:SidePanelView />
         </DataTemplate>
-        <DataTemplate DataType="{x:Type local:MainBrowserListViewModel}">
-            <local:MainBrowserListView />
-        </DataTemplate>
         <DataTemplate DataType="{x:Type local:MainBrowserTileViewModel}">
             <local:MainBrowserTileView />
         </DataTemplate>
