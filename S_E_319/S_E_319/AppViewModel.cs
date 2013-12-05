@@ -27,6 +27,7 @@ namespace S_E_319
             ToolBar = new ToolBarViewModel();
             SidePanel = new SidePanelViewModel();
             MainBrowser = new MainBrowserTileViewModel();
+
         }
 
         #endregion
