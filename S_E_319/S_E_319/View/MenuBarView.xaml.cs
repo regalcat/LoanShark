@@ -24,5 +24,12 @@ namespace S_E_319
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Book b = new Book();
+            var wind = new AddEditView(new Book());
+            wind.ShowDialog();
+        }
     }
 }

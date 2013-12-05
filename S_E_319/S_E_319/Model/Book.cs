@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace S_E_319
 {
-    class Book
+    public class Book
     {
         #region Fields and Autoproperties
 
@@ -23,6 +23,11 @@ namespace S_E_319
         #endregion
 
         #region Constructors
+
+        public Book() 
+        {
+
+        }
 
         public Book(string title, string author, string genre, string location, string description, string borrower, DateTime borrowDate, bool isFavorite, bool isLoaned)
         {

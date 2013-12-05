@@ -109,7 +109,8 @@
                 -->
                 <DataTemplate>
                     <Border Height="100" Width="200" 
-                            BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray">
+                            BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray"
+                            MouseLeftButtonDown="Border_MouseLeftButtonDown_1">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition/>

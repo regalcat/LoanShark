@@ -24,5 +24,11 @@ namespace S_E_319
         {
             InitializeComponent();
         }
+
+        private void Border_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Hello");
+
+        }
     }
 }

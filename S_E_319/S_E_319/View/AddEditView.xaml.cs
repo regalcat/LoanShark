@@ -12,16 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace S_E_319.View
+namespace S_E_319
 {
     /// <summary>
     /// Interaction logic for AddEditView.xaml
     /// </summary>
     public partial class AddEditView : Window
     {
-        public AddEditView()
+        private Book book;
+        public AddEditView(Book b)
         {
             InitializeComponent();
+
+            book = b;
         }
+
     }
 }
