@@ -7,17 +7,23 @@ using System.Windows.Media;
 
 namespace S_E_319
 {
-    class SidePanelViewModel
+    class SidePanelViewModel : ViewModelBase
     {
-        public Brush BackgroundColor { get; private set; }
+        private Brush bColor;
 
         public SidePanelViewModel()
         {
         }
 
-        public void ChangeColor(SolidColorBrush b)
+        public void ChangeColor(Brush b)
         {
             BackgroundColor = b;
+        }
+
+        public Brush BackgroundColor
+        {
+            get { return bColor; }
+            private set { bColor = value; OnPropertyChanged("BackgroundColor"); }
         }
     }
 }

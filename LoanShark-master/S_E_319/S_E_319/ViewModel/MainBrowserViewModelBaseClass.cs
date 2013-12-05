@@ -10,7 +10,7 @@ namespace S_E_319
 {
     abstract class MainBrowserViewModelBaseClass : ViewModelBase
     {
-        public Brush BackgroundColor { get; private set; }
+        public Brush bColor;
 
         #region Fields and Autoproperties
         private static ObservableCollection<ItemBaseClass> _items;
@@ -38,9 +38,15 @@ namespace S_E_319
             _items.Add(new MiscItem("Nic-nak", "Caleb", "Misc"));
         }
 
-        public void ChangeColor(SolidColorBrush b)
+        public void ChangeColor(Brush b)
         {
             BackgroundColor = b;
+        }
+
+        public Brush BackgroundColor
+        {
+            get { return bColor; }
+            private set { bColor = value; OnPropertyChanged("BackgroundColor"); }
         }
 
         

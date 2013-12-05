@@ -13,8 +13,8 @@
         <MenuItem Width="60" Header="Settings">
             <MenuItem Header="Color Schemes">
                 <!--Temporarily commenting out the click function so the program will run. Will fix after demo.-->
-                <MenuItem Header="Loanshark Original" /><!--Click="{Binding LoanShark_Clicked}"-->
-                <MenuItem Header="Cyclone Pride" />
+                <MenuItem Header="Loanshark Original" Command="{Binding LoanShark_Click}"/><!--Click="{Binding LoanShark_Clicked}"-->
+                <MenuItem Header="Cyclone Pride" Command="{Binding Cyclone_Click}"/>
                 <!--Click="{Binding Cyclone_Clicked}"-->
                 
             </MenuItem>

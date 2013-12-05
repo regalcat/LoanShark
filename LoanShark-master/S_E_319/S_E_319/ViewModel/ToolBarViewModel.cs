@@ -7,16 +7,23 @@ using System.Windows.Media;
 
 namespace S_E_319
 {
-    class ToolBarViewModel
+    class ToolBarViewModel : ViewModelBase
     {
-        public Brush BackgroundColor {get; private set;}
+        public Brush bColor;
         public ToolBarViewModel()
         {
+
         }
 
-        public void ChangeColor(SolidColorBrush b)
+        public void ChangeColor(Brush b)
         {
             BackgroundColor = b;
+        }
+
+        public Brush BackgroundColor
+        {
+            get { return bColor; }
+            private set { bColor = value; OnPropertyChanged("BackgroundColor"); }
         }
     }
 }
