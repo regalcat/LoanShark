@@ -45,7 +45,7 @@ namespace S_E_319
 
             if (handler != null)
             {
-                var e = new ColorChangedEventArgs(Brushes.PowderBlue, Brushes.Tan, Brushes.Navy, Brushes.LightSkyBlue);
+                var e = new ColorChangedEventArgs(Brushes.PowderBlue, Brushes.Navy, Brushes.Tan, Brushes.LightSkyBlue);
                 handler(this, e);
             }
         }

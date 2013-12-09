@@ -5,7 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <ToolBar Name="LSToolbar" Background="{Binding BackgroundColor, TargetNullValue='White'}">
-        <MenuItem Header="Add" Name="LSAdd" />
+    <ToolBar>
+        <MenuItem Header="Search" Name="TBSearch" Command="{Binding SearchCommand}" />
+        <TextBox Name="TBTextBox" Text="{Binding name, Mode=TwoWay}" Width="250" />
+        <MenuItem Header="Save" Name="TBSave" Command="{Binding SaveCommand}" />
+        <MenuItem Header="Loaned" Name="TBLoan" Command="{Binding LoanedCommand}" />
+        <MenuItem Header="Favorite" Name="TBFav" Command="{Binding FavoriteCommand}" />
+        <MenuItem Header="Load" Name="TBTest" Command="{Binding TestCommand}" />
     </ToolBar>
 </UserControl>

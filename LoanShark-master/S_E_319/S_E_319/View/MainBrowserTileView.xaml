@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:S_E_319"
              mc:Ignorable="d" Height="300" Width="300">
-    
+
     <Grid Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <!-- Listbox That Holds Tiles -->
         <ListBox 
             ItemsSource="{Binding Items}"
@@ -108,12 +108,12 @@
                     </Border>
                 </DataTemplate>
                 -->
-                
+
                 <DataTemplate>
-                    
+
                     <Border Height="100" Width="200" 
-                            BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray">
-                        
+                            BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray" MouseLeftButtonDown="{Binding UpdateSidePanel}">
+
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition />
@@ -125,7 +125,7 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <TextBlock
+                            <TextBlock Name="Title"
                                 Text="{Binding Name}"
                                 Grid.Row="0"
                                 Grid.ColumnSpan="2"
@@ -139,7 +139,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 />
-                            <TextBlock 
+                            <TextBlock Name="Category" 
                                 Text="{Binding Category}"
                                 Grid.Row="1"
                                 Grid.Column="1"
@@ -160,14 +160,14 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
                                 />
-                            <TextBlock
+                            <TextBlock Name="Owner"
                                 Text="{Binding Owner}"
                                 Grid.Row="3"
                                 Grid.Column="0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"
                                 />
-                            <TextBlock
+                            <TextBlock Name="Borrower"
                                 Text="{Binding Borrower}"
                                 Grid.Row="3"
                                 Grid.Column="1"

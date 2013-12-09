@@ -7,7 +7,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <TextBlock
-            Text="Side Panel"
+            Text="{Binding CurrentBook}"
             VerticalAlignment="Center"
             />
     </Grid>

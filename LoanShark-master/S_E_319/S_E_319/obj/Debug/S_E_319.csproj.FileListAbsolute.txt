@@ -48,3 +48,8 @@ C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\D
 C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\S_E_319.g.resources
 C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\S_E_319.Properties.Resources.resources
 C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\S_E_319.csproj.GenerateResource.Cache
+C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\View\AddEditView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\View\LoanView.baml
+C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\View\AddEditView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\View\AppView.g.cs
+C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\obj\Debug\View\LoanView.g.cs

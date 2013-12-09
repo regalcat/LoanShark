@@ -34,7 +34,7 @@
                 Content="{Binding ToolBar}"
                 />
         </Border>
-        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -56,6 +56,6 @@
                 Grid.Column="2"
                 />
         </Grid>
-        
+
     </DockPanel>
 </Window>

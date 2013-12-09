@@ -2,107 +2,88 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using System.Xml;
+using System.Windows.Controls;
 
 namespace S_E_319
 {
-    static class Database : ObservableCollection<ItemBaseClass>
+    static class Database
     {
-        List<ItemBaseClass> database;
 
-        public Database()
+        public static ObservableCollection<Book> items = new ObservableCollection<Book>();
+        private static ICollectionView _itemView = CollectionViewSource.GetDefaultView(items);
+        private static string _filterString = "" ;
+        
+
+        public static void GenerateList()
         {
-            database = new List<ItemBaseClass>();
+            _itemView.Filter = filter;
+            items.Clear();
+            items.Add(new Book("Bible", "God", "Fantasy", "test", "test", "Random Guy", DateTime.Now.ToString(), false, false));
+            _filterString = "";
+            
         }
 
-        public Database(String file)
-            : this()
+        public static void readXml(string path)
         {
-            load(file);
-        }
+            _itemView.Filter = filter;
+            items.Clear();
+            _filterString = "";
+            _itemView = CollectionViewSource.GetDefaultView(items);
+            _itemView.Filter = filter;
 
-        public Database search(String search)
-        {
-            Database found = new Database();
-            foreach (BookItem b in database)
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path);
+            XmlNode root = doc.FirstChild;
+            foreach (XmlNode n in root.ChildNodes)
             {
-                if (b.getSearchValues().Contains(search))
-                    found.add(b);
+                items.Add(new Book(n));
             }
-            return found;
+            _itemView.Refresh();
         }
 
-        public ItemBaseClass get(int item)
-        {
-            return database[item];
-        }
-
-        public void replace(int item, BookItem book)
-        {
-            database[item] = book;
-        }
-
-        public void replace(BookItem old, BookItem young)
-        {
-            database.Remove(old);
-            database.Add(young);
-        }
-
-        public void add(ItemBaseClass book)
-        {
-            database.Add(book);
-        }
-
-        public void delete(int item)
-        {
-            database.RemoveAt(item);
-        }
-
-        public void add(string name, string author, string isbn, string owner, string category)
-        {
-            database.Add(new BookItem(name, author, isbn, owner, category));
-        }
-
-        public void delete(BookItem book)
-        {
-            database.Remove(book);
-        }
-
-        public void load(String file)
+        public static void saveXml(string path)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(file);
-            XmlNode root = doc.FirstChild;
-            for (int i = 0; i < root.ChildNodes.Count; i++)
+            XmlNode root = doc.CreateElement("root");
+            foreach (Book b in items)
             {
-                if (root.ChildNodes[i].Name.Equals("book"))
-                    add(new BookItem(root.ChildNodes[i]));
-                else
-                    add(new MiscItem(root.ChildNodes[i]));
+                b.appendToXml(root, doc);
             }
+            doc.AppendChild(root);
+            doc.Save(path);
         }
 
-        public void save(String file)
+        public static void search(String search)
         {
-            XmlDocument xml = new XmlDocument();
-            XmlElement cur, root;
-            root = xml.CreateElement("root");
-            ItemBaseClass book;
-            for (int i = 0; i < database.Count; i++)
-            {
-                // setting attributes is not the best way to do this
-                // but i didn't feel like messing around with right now
-                // probably will be implemented in a day or two
-                book = database[i];
-                cur = xml.CreateElement(book.type());
-                book.putIntoElement(cur);
-                root.AppendChild(cur);
-            }
-            xml.Save(file);
+            FilterString = search;
         }
 
+        public static string FilterString
+        {
+            get { return _filterString; }
+            set
+            {
+                _filterString = value;
+                _itemView.Refresh();
+            }
+        }
+
+        private static bool filter(object item)
+        {
+            if (_filterString.Equals(""))
+                return true;
+            Book book = item as Book;
+            if(_filterString.Equals("~fav"))
+                return book.IsFavorite;
+            if(_filterString.Equals("~loan"))
+                return book.IsLoaned;;
+            return book.getSearchString().ToLower().Contains( _filterString.ToLower() );
+        }
     }
 }

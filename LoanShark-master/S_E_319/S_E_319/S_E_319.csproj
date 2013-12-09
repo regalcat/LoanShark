@@ -57,20 +57,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BookItem.cs" />
+    <Compile Include="Model\Database.cs" />
     <Compile Include="Model\ItemBaseClass.cs" />
     <Compile Include="Model\MiscItem.cs" />
     <Compile Include="ViewModel\MainBrowserListViewModel.cs" />
     <Compile Include="ViewModel\MainBrowserTileViewModel.cs" />
     <Compile Include="ViewModel\MainBrowserViewModelBaseClass.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\AddEditView.xaml.cs">
+      <DependentUpon>AddEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoanView.xaml.cs">
+      <DependentUpon>LoanView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainBrowserListView.xaml.cs">
       <DependentUpon>MainBrowserListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\SidePanelViewModel.cs" />
     <Compile Include="View\MainBrowserTileView.xaml.cs">
       <DependentUpon>MainBrowserTileView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\SidePanelViewModel.cs" />
     <Compile Include="View\SidePanelView.xaml.cs">
       <DependentUpon>SidePanelView.xaml</DependentUpon>
     </Compile>
@@ -82,12 +90,12 @@
     <Compile Include="View\MenuBarView.xaml.cs">
       <DependentUpon>MenuBarView.xaml</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AppView.xaml.cs">
+    <Compile Include="View\AppView.xaml.cs">
       <DependentUpon>AppView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,9 +123,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AppView.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="View\AddEditView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\LoanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\MainBrowserListView.xaml">
       <SubType>Designer</SubType>
@@ -136,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MenuBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AppView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

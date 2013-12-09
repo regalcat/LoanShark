@@ -11,6 +11,8 @@ namespace S_E_319
     {
         private Brush bColor;
 
+        public BookItem CurrentBook { get; private set; }
+
         public SidePanelViewModel()
         {
         }
