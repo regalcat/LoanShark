@@ -16,6 +16,8 @@ namespace S_E_319
             LoanShark_Click = new RelayCommand(blah => LoanShark_Clicked());
             Murica_Click = new RelayCommand(blah => Murica_Clicked());
             Rainforest_Click = new RelayCommand(blah => Rainforest_Clicked());
+            SaveCommand = new RelayCommand(SaveClicked);
+            LoadCommand = new RelayCommand(LoadClicked);
         }
 
         public Brush bColor;
@@ -36,6 +38,27 @@ namespace S_E_319
 
         public ICommand Rainforest_Click { get; private set; }
 
+        public ICommand SaveCommand { get; private set; }
+
+        public ICommand LoadCommand { get; private set; }
+
+        private void LoadClicked(object obj)
+        {
+            try
+            {
+                Database.readXml("test.xml");
+            }
+            catch (Exception e)
+            {
+                Database.GenerateList();
+            }
+        }
+
+        private void SaveClicked(object obj)
+        {
+
+            Database.saveXml("test.xml");
+        }
 
         public void Cyclone_Clicked()
         {
@@ -55,7 +78,7 @@ namespace S_E_319
 
             if (handler != null)
             {
-                var e = new ColorChangedEventArgs(Brushes.PowderBlue, Brushes.Navy, Brushes.Tan, Brushes.LightSkyBlue);
+                var e = new ColorChangedEventArgs(Brushes.PowderBlue, Brushes.AliceBlue, Brushes.Tan, Brushes.LightSkyBlue);
                 handler(this, e);
             }
         }
@@ -65,7 +88,7 @@ namespace S_E_319
             var handler = Murica;
             if (handler != null)
             {
-                var e = new ColorChangedEventArgs(Brushes.CornflowerBlue, Brushes.Crimson, Brushes.Crimson, Brushes.White);
+                var e = new ColorChangedEventArgs(Brushes.CornflowerBlue, Brushes.White, Brushes.Crimson, Brushes.White);
                 handler(this, e);
             }
         }
@@ -75,7 +98,7 @@ namespace S_E_319
             var handler = Rainforest;
             if (handler != null)
             {
-                var e = new ColorChangedEventArgs(Brushes.Olive, Brushes.OliveDrab, Brushes.White, Brushes.White);
+                var e = new ColorChangedEventArgs(Brushes.Olive, Brushes.OliveDrab, Brushes.Beige, Brushes.Beige);
                 handler(this, e);
             }
         }
@@ -126,21 +149,5 @@ namespace S_E_319
         {
             return this.brush3;
         }
-    }
-    public class RelayCommand : ICommand
-    {
-        #region Fields
-        readonly Action<object> _execute;
-        readonly Predicate<object> _canExecute;
-        #endregion // Fields
-        #region Constructors
-        public RelayCommand(Action<object> execute) : this(execute, null) { }
-        public RelayCommand(Action<object> execute, Predicate<object> canExecute) { if (execute == null) throw new ArgumentNullException("execute"); _execute = execute; _canExecute = canExecute; }
-        #endregion // Constructors
-        #region ICommand Members [DebuggerStepThrough]
-        public bool CanExecute(object parameter) { return _canExecute == null ? true : _canExecute(parameter); }
-        public event EventHandler CanExecuteChanged { add { CommandManager.RequerySuggested += value; } remove { CommandManager.RequerySuggested -= value; } }
-        public void Execute(object parameter) { _execute(parameter); }
-        #endregion // ICommand Members
     }
 }

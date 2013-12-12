@@ -27,7 +27,7 @@ namespace S_E_319
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            (this.DataContext as MainBrowserTileViewModel).OnTileSelectionChanged(sender, e);
         }
     }
 }

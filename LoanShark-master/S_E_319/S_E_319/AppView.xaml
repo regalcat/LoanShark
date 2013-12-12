@@ -37,7 +37,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <!--
+            
             <ContentControl
                 Content="{Binding SidePanel}"
                 Grid.Column="0"
@@ -48,10 +48,9 @@
                 Width="3"
                 Background="SlateGray"
                 />
-            -->
             <ContentControl
                 Content="{Binding MainBrowser}"
-                Grid.ColumnSpan="3"
+                Grid.Column="2"
                 BorderBrush="Black"
                 BorderThickness="2"
                 />

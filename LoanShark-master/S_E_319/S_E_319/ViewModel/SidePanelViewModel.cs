@@ -11,25 +11,13 @@ namespace S_E_319
     {
         private Brush bColor;
 
-        public Book CurrentBook { get; private set; }
+        private Book _book;
 
-        public string Title { get; private set; }
-
-        public string Author { get; private set; }
-
-        public string Genre { get; private set; }
-
-        public string Location { get; private set; }
-
-        public string Description { get; private set; }
-
-        public string Borrower { get; private set; }
-
-        public string BorrowDate { get; private set; }
-
-        public bool Favorite {get; private set;}
-
-        public bool Loaned { get; private set; }
+        public Book CurrentBook 
+        {
+            get { return _book; }
+            private set { _book = value; OnPropertyChanged("CurrentBook"); } 
+        }
 
         public SidePanelViewModel()
         {
@@ -42,15 +30,7 @@ namespace S_E_319
 
         public void ChangeContent(Book b)
         {
-            Title = b.Title;
-            Author = b.Author;
-            Genre = b.Genre;
-            Location = b.Location;
-            Description = b.Description;
-            Borrower = b.Borrower;
-            BorrowDate = b.BorrowDate;
-            Favorite = b.IsFavorite;
-            Loaned = b.IsLoaned;
+            CurrentBook = b;
         }
 
         public Brush BackgroundColor

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace S_E_319
 {
@@ -34,6 +36,7 @@ namespace S_E_319
             MainBrowser.UpdateSidePanel += OnTileClicked;
             MenuBar.Murica += OnThemeChanged;
             MenuBar.Rainforest += OnThemeChanged;
+            MainBrowser.TileSelectionChanged += OnTileClicked;
         }
 
 
@@ -43,8 +46,17 @@ namespace S_E_319
 
         private void OnTileClicked(Object sender, EventArgs e)
         {
-            Book b = (Book)sender;
-            SidePanel.ChangeContent(b);
+            var selctionChangedEventArgs = e as SelectionChangedEventArgs;
+            if (selctionChangedEventArgs != null)
+            {
+                foreach (Object o in selctionChangedEventArgs.AddedItems) 
+                {
+                    if ((o as Book) != null)
+                    {
+                        SidePanel.ChangeContent(o as Book);
+                    }
+                }
+            }
         }
 
         private void OnThemeChanged(Object sender, EventArgs e)

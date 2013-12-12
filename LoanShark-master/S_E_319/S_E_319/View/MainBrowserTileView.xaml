@@ -10,7 +10,12 @@
         <!-- Listbox That Holds Tiles -->
         <ListBox 
             ItemsSource="{Binding Items}"
-            ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListBox_SelectionChanged">
+            SelectionMode="Single"
+            SelectedItem="{Binding Mode=OneWayToSource, Path=CurrentlySelectedItem}"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+            SelectionChanged="ListBox_SelectionChanged"
+            x:Name="MainListBox">
 
             <!-- Template for wrapping -->
             <ListBox.ItemsPanel>
@@ -18,7 +23,9 @@
                     <WrapPanel IsItemsHost="True" Orientation="Horizontal" >
                         <WrapPanel.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="Loan" Command="{Binding LoanCommand}" CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"/>
+                                <MenuItem Header="Loan" Command="{Binding LoanCommand}" />
+                                <MenuItem Header="Edit" Command="{Binding EditCommand}" />
+                                <MenuItem Header="Remove" Command="{Binding RemoveCommand}" />
                             </ContextMenu>
                         </WrapPanel.ContextMenu>
                     </WrapPanel>

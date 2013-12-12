@@ -7,10 +7,9 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <ToolBar Background="{Binding BackgroundColor}">
         <MenuItem Header="Search" Name="TBSearch" Command="{Binding SearchCommand}" />
-        <TextBox Name="TBTextBox" Text="{Binding name, Mode=TwoWay}" Width="250" />
-        <MenuItem Header="Save" Name="TBSave" Command="{Binding SaveCommand}" />
+        <TextBox Name="TBTextBox" Text="{Binding name, Mode=TwoWay}" Width="250" /> 
+        <MenuItem Header="Show All" Name="TBShow" Command="{Binding ShowCommand}" />
         <MenuItem Header="Loaned" Name="TBLoan" Command="{Binding LoanedCommand}" />
         <MenuItem Header="Favorite" Name="TBFav" Command="{Binding FavoriteCommand}" />
-        <MenuItem Header="Load" Name="TBTest" Command="{Binding TestCommand}" />
     </ToolBar>
 </UserControl>

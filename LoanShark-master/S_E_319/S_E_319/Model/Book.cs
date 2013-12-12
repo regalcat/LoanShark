@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,19 +8,65 @@ using System.Xml;
 
 namespace S_E_319
 {
-    public class Book
+    public class Book : INotifyPropertyChanged
     {
         #region Fields and Autoproperties
+        private string _title;
+        private string _author;
+        private string _genre;
+        private string _location;
+        private string _description;
+        private string _borrower;
+        private string _borrowDate;
+        private bool _isFavorite;
+        private bool _isLoaned;
 
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public string Genre { get; set; }
-        public string Location { get; set; }
-        public string Description { get; set; }
-        public string Borrower { get; set; }
-        public string BorrowDate { get; set; }
-        public bool IsFavorite { get; set; }
-        public bool IsLoaned { get; set; }
+
+        public string Title 
+        {
+            get { return _title; }
+            set { _title = value; OnPropertyChanged("Title"); }
+        }
+        public string Author
+        {
+            get { return _author; }
+            set { _author = value; OnPropertyChanged("Author"); }
+        }
+        public string Genre
+        {
+            get { return _genre; }
+            set { _genre = value; OnPropertyChanged("Genre"); }
+        }
+        public string Location
+        {
+            get { return _location; }
+            set { _location = value; OnPropertyChanged("Location"); }
+        }
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; OnPropertyChanged("Description"); }
+        }
+        public string Borrower
+        {
+            get { return _borrower; }
+            set { _borrower = value; OnPropertyChanged("Borrower"); }
+        }
+        public string BorrowDate
+        {
+            get { return _borrowDate; }
+            set { _borrowDate = value; OnPropertyChanged("BorrowDate"); }
+        }
+        public bool IsFavorite
+        {
+            get { return _isFavorite; }
+            set { _isFavorite = value; OnPropertyChanged("IsFavorite"); }
+        }
+        public bool IsLoaned
+        {
+            get { return _isLoaned; }
+            set { _isLoaned = value; OnPropertyChanged("IsLoaned"); }
+        }
 
         #endregion
 
@@ -99,6 +146,24 @@ namespace S_E_319
             // the ~!~ isnt super necessary but it stops the search from finding a match across multiple fields
             return Title + "~!~" + Author + "~!~" + Genre + "~!~" + Location + "~!~" + Description + "~!~" + Borrower;
         }
+
+
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+
+            if (handler != null)
+            {
+                var e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+
+        #endregion
 
     }
 }

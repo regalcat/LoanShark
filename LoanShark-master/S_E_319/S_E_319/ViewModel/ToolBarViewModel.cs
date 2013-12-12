@@ -39,26 +39,13 @@ namespace S_E_319
             Database.search(name);
         }
 
-        RelayCommand _testCommand; public ICommand TestCommand { get { if (_testCommand == null) { _testCommand = new RelayCommand(TestClicked, null); } return _testCommand; } }
 
-        private void TestClicked(object obj)
-        {
-            try
-            {
-                Database.readXml("test.xml");
-            }
-            catch (Exception e)
-            {
-                Database.GenerateList();
-            }
-        }
+        RelayCommand _showCommand; public ICommand ShowCommand { get { if (_showCommand == null) { _showCommand = new RelayCommand(showClicked, null); } return _showCommand; } }
 
-        RelayCommand _saveCommand; public ICommand SaveCommand { get { if (_saveCommand == null) { _saveCommand = new RelayCommand(saveClicked, null); } return _saveCommand; } }
-
-        private void saveClicked(object obj)
+        private void showClicked(object obj)
         {
 
-            Database.saveXml("test.xml");
+            Database.search("");
         }
 
         RelayCommand _loanedCommand; public ICommand LoanedCommand { get { if (_loanedCommand == null) { _loanedCommand = new RelayCommand(loanedClicked, null); } return _loanedCommand; } }

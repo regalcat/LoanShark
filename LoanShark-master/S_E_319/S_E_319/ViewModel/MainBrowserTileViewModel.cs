@@ -6,20 +6,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Input;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace S_E_319
 {
     class MainBrowserTileViewModel : ViewModelBase
     {
         #region Fields and Autoproperties
+
+        public Object CurrentlySelectedItem { get; set; }
         
         private static ObservableCollection<Book> _items;
 
         public event EventHandler UpdateSidePanel;
 
-        public event EventHandler someEvent;
+        public event EventHandler TileSelectionChanged;
 
         public ICommand LoanCommand { get; private set; }
+        public ICommand EditCommand { get; private set; }
+        public ICommand RemoveCommand { get; private set; }
+
 
         public Brush bColor;
 
@@ -36,6 +43,8 @@ namespace S_E_319
         public MainBrowserTileViewModel()
         {
             LoanCommand = new RelayCommand(OnLoanCommand, CanLoanBook);
+            EditCommand = new RelayCommand(OnEditCommand);
+            RemoveCommand = new RelayCommand(OnRemoveCommand);
             if (Database.items == null) { Database.GenerateList(); }
             Items = Database.items;
         }
@@ -58,19 +67,10 @@ namespace S_E_319
             }
         }
 
-        public void OnEvent()
-        {
-            var handler = someEvent;
-            if (handler != null)
-            {
-                handler(this, new EventArgs());
-            }
-        }
 
         private void OnLoanCommand(Object o)
         {
-            
-            Book b = o as Book;
+            Book b = CurrentlySelectedItem as Book;
             if (b == null) { return; }
             var wind = new LoanView(b);
             wind.ShowDialog();
@@ -78,12 +78,24 @@ namespace S_E_319
 
         private bool CanLoanBook(Object o)
         {
-            Book b = o as Book;
-            if (b != null)
-            {
-                return !b.IsLoaned;
-            }
-            return false;
+            Book b = CurrentlySelectedItem as Book;
+            if (b == null) { return false; }
+            return !b.IsLoaned;
+        }
+
+        private void OnEditCommand(Object o)
+        {
+            Book b = CurrentlySelectedItem as Book;
+            if (b == null) { return; }
+            var wind = new AddEditView(b);
+            wind.ShowDialog();
+        }
+
+        private void OnRemoveCommand(Object o)
+        {
+            Book b = CurrentlySelectedItem as Book;
+            if (b == null) { return; }
+            Database.items.Remove(b);
         }
 
         public void ChangeColor(Brush b)
@@ -97,6 +109,14 @@ namespace S_E_319
             private set { bColor = value; OnPropertyChanged("BackgroundColor"); }
         }
 
+        public void OnTileSelectionChanged(object sender, SelectionChangedEventArgs e) 
+        {
+            var handler = TileSelectionChanged;
+            if (handler != null)
+            {
+                handler(sender, e);
+            }
+        }
         
         #endregion
     }
