@@ -14,6 +14,8 @@ namespace S_E_319
         {
             Cyclone_Click = new RelayCommand(kitty => Cyclone_Clicked());
             LoanShark_Click = new RelayCommand(blah => LoanShark_Clicked());
+            Murica_Click = new RelayCommand(blah => Murica_Clicked());
+            Rainforest_Click = new RelayCommand(blah => Rainforest_Clicked());
         }
 
         public Brush bColor;
@@ -22,9 +24,17 @@ namespace S_E_319
 
         public event EventHandler LoanShark;
 
+        public event EventHandler Murica;
+
+        public event EventHandler Rainforest;
+
         public ICommand Cyclone_Click { get; private set; }
 
         public ICommand LoanShark_Click { get; private set; }
+
+        public ICommand Murica_Click { get; private set; }
+
+        public ICommand Rainforest_Click { get; private set; }
 
 
         public void Cyclone_Clicked()
@@ -34,7 +44,7 @@ namespace S_E_319
             if (handler != null)
             {
 
-                var e = new ColorChangedEventArgs(Brushes.IndianRed, Brushes.PaleGoldenrod, Brushes.Red, Brushes.Yellow);
+                var e = new ColorChangedEventArgs(Brushes.Yellow, Brushes.Crimson, Brushes.Red, Brushes.Yellow);
                 handler(this, e);
             }
         }
@@ -46,6 +56,26 @@ namespace S_E_319
             if (handler != null)
             {
                 var e = new ColorChangedEventArgs(Brushes.PowderBlue, Brushes.Navy, Brushes.Tan, Brushes.LightSkyBlue);
+                handler(this, e);
+            }
+        }
+
+        public void Murica_Clicked()
+        {
+            var handler = Murica;
+            if (handler != null)
+            {
+                var e = new ColorChangedEventArgs(Brushes.CornflowerBlue, Brushes.Crimson, Brushes.Crimson, Brushes.White);
+                handler(this, e);
+            }
+        }
+
+        public void Rainforest_Clicked()
+        {
+            var handler = Rainforest;
+            if (handler != null)
+            {
+                var e = new ColorChangedEventArgs(Brushes.Olive, Brushes.OliveDrab, Brushes.White, Brushes.White);
                 handler(this, e);
             }
         }
@@ -97,19 +127,20 @@ namespace S_E_319
             return this.brush3;
         }
     }
-    public class RelayCommand : ICommand { 
-        #region Fields 
+    public class RelayCommand : ICommand
+    {
+        #region Fields
         readonly Action<object> _execute;
         readonly Predicate<object> _canExecute;
-        #endregion // Fields 
+        #endregion // Fields
         #region Constructors
-        public RelayCommand(Action<object> execute) : this(execute, null) { } 
-        public RelayCommand(Action<object> execute, Predicate<object> canExecute) { if (execute == null) throw new ArgumentNullException("execute"); _execute = execute; _canExecute = canExecute; } 
-        #endregion // Constructors 
-        #region ICommand Members [DebuggerStepThrough] 
-        public bool CanExecute(object parameter) { return _canExecute == null ? true : _canExecute(parameter); } 
-        public event EventHandler CanExecuteChanged { add { CommandManager.RequerySuggested += value; } remove { CommandManager.RequerySuggested -= value; } } 
-        public void Execute(object parameter) { _execute(parameter); } 
-        #endregion // ICommand Members 
+        public RelayCommand(Action<object> execute) : this(execute, null) { }
+        public RelayCommand(Action<object> execute, Predicate<object> canExecute) { if (execute == null) throw new ArgumentNullException("execute"); _execute = execute; _canExecute = canExecute; }
+        #endregion // Constructors
+        #region ICommand Members [DebuggerStepThrough]
+        public bool CanExecute(object parameter) { return _canExecute == null ? true : _canExecute(parameter); }
+        public event EventHandler CanExecuteChanged { add { CommandManager.RequerySuggested += value; } remove { CommandManager.RequerySuggested -= value; } }
+        public void Execute(object parameter) { _execute(parameter); }
+        #endregion // ICommand Members
     }
 }

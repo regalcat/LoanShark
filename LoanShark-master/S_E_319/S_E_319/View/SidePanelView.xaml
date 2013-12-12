@@ -7,8 +7,28 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <TextBlock
-            Text="{Binding CurrentBook}"
-            VerticalAlignment="Center"
+            Text="{Binding Title, TargetNullValue='Title'}"
+            />
+        <TextBlock
+            Text="{Binding Author, TargetNullValue='Author'}"
+            />
+        <TextBlock
+            Text="{Binding Genre, TargetNullValue='Genre'}"
+            />
+        <TextBlock
+            Text="{Binding Description, TargetNullValue='Decription'}"
+            />
+        <TextBlock
+            Text="{Binding Borrower, TargetNullValue='Borrower'}"
+            />
+        <TextBlock
+            Text="{Binding BorrowDate, TargetNullValue='Borrow Date'}"
+            />
+        <CheckBox
+            IsChecked="{Binding Favorite, TargetNullValue=false}"
+            />
+        <CheckBox
+            IsChecked="{Binding Loaned, TargetNullValue=false}"
             />
     </Grid>
 </UserControl>

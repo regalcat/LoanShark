@@ -24,6 +24,7 @@ namespace S_E_319
         public LoanView(Book b)
         {
             InitializeComponent();
+            book = b;
         }
 
         private void Cancel_Button(object sender, RoutedEventArgs e)

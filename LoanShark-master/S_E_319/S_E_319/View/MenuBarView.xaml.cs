@@ -29,6 +29,15 @@ namespace S_E_319
         {
             System.Environment.Exit(0);
         }
-
+        private void AddBook(object sender, RoutedEventArgs e)
+        {
+            var wind = new AddEditView();
+            wind.ShowDialog();
+            if ((bool)wind.DialogResult)
+            {
+                var b = wind.GetBook();
+                Database.items.Add(b);
+            }
+        }
     }
 }

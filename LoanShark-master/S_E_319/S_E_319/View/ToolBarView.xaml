@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <ToolBar>
+    <ToolBar Background="{Binding BackgroundColor}">
         <MenuItem Header="Search" Name="TBSearch" Command="{Binding SearchCommand}" />
         <TextBox Name="TBTextBox" Text="{Binding name, Mode=TwoWay}" Width="250" />
         <MenuItem Header="Save" Name="TBSave" Command="{Binding SaveCommand}" />

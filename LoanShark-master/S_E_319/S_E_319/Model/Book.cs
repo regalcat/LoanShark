@@ -49,23 +49,23 @@ namespace S_E_319
             Description = getXmlParameter(node, "description");
             Borrower = getXmlParameter(node, "borrower");
             BorrowDate = getXmlParameter(node, "borrowDate");
-            IsFavorite = ! getXmlParameter(node, "favorite").Equals("");
-            IsLoaned = ! getXmlParameter(node, "loaned").Equals("");
+            IsFavorite = !getXmlParameter(node, "favorite").Equals("");
+            IsLoaned = !getXmlParameter(node, "loaned").Equals("");
         }
 
         #endregion
 
-       private static string getXmlParameter(XmlNode node, string name)
+        private static string getXmlParameter(XmlNode node, string name)
         {
-            foreach(XmlNode param in node.ChildNodes)
-            if (param.Name.Equals(name))
-            {
-                return param.InnerXml;
-            }
+            foreach (XmlNode param in node.ChildNodes)
+                if (param.Name.Equals(name))
+                {
+                    return param.InnerXml;
+                }
             return "";
         }
 
-       private static void setXmlParameter(XmlNode node, XmlDocument doc, string name, string value)
+        private static void setXmlParameter(XmlNode node, XmlDocument doc, string name, string value)
         {
 
             XmlElement n = doc.CreateElement(name);
@@ -73,32 +73,32 @@ namespace S_E_319
             node.AppendChild(n);
         }
 
-       public void appendToXml(XmlNode parent, XmlDocument doc)
-       {
-           XmlNode node = doc.CreateElement("book");
-           setXmlParameter(node, doc, "title", Title);
-           setXmlParameter(node, doc, "author", Author);
-           setXmlParameter(node, doc, "genre", Genre);
-           setXmlParameter(node, doc, "location", Location);
-           setXmlParameter(node, doc, "description", Description);
-           setXmlParameter(node, doc, "borrower", Borrower);
-           setXmlParameter(node, doc, "borrowDate", BorrowDate);
-           if (IsFavorite)
-               setXmlParameter(node, doc, "favorite", "I like dis!");
-           if(IsLoaned)
-               setXmlParameter(node, doc, "loaned", "Gimme it back!");
-           parent.AppendChild(node);
-       }
+        public void appendToXml(XmlNode parent, XmlDocument doc)
+        {
+            XmlNode node = doc.CreateElement("book");
+            setXmlParameter(node, doc, "title", Title);
+            setXmlParameter(node, doc, "author", Author);
+            setXmlParameter(node, doc, "genre", Genre);
+            setXmlParameter(node, doc, "location", Location);
+            setXmlParameter(node, doc, "description", Description);
+            setXmlParameter(node, doc, "borrower", Borrower);
+            setXmlParameter(node, doc, "borrowDate", BorrowDate);
+            if (IsFavorite)
+                setXmlParameter(node, doc, "favorite", "I like dis!");
+            if (IsLoaned)
+                setXmlParameter(node, doc, "loaned", "Gimme it back!");
+            parent.AppendChild(node);
+        }
 
-       public string getSearchString()
-       {
-           // this is a very quick and dirty search implementation, I generate this string
-           // then see if this string contains the value I am searching for
+        public string getSearchString()
+        {
+            // this is a very quick and dirty search implementation, I generate this string
+            // then see if this string contains the value I am searching for
 
 
-           // the ~!~ isnt super necessary but it stops the search from finding a match across multiple fields
-           return Title + "~!~" + Author + "~!~" + Genre + "~!~" + Location + "~!~" + Description + "~!~" + Borrower;
-       }
+            // the ~!~ isnt super necessary but it stops the search from finding a match across multiple fields
+            return Title + "~!~" + Author + "~!~" + Genre + "~!~" + Location + "~!~" + Description + "~!~" + Borrower;
+        }
 
     }
 }

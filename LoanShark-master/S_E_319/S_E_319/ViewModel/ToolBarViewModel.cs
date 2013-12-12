@@ -29,11 +29,11 @@ namespace S_E_319
 
         private string _name;
         public string name { get { if (_name == null) _name = "Search here!"; return _name; } set { _name = value; } }
-        
+
 
 
         RelayCommand _searchCommand; public ICommand SearchCommand { get { if (_searchCommand == null) { _searchCommand = new RelayCommand(SearchClicked, null); } return _searchCommand; } }
-        
+
         private void SearchClicked(object obj)
         {
             Database.search(name);
@@ -57,7 +57,7 @@ namespace S_E_319
 
         private void saveClicked(object obj)
         {
-            
+
             Database.saveXml("test.xml");
         }
 
@@ -75,5 +75,5 @@ namespace S_E_319
             Database.search("~fav");
         }
     }
-    }
+}
 

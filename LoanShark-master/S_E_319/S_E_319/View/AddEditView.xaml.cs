@@ -34,8 +34,8 @@ namespace S_E_319
             InitializeComponent();
             book = b;
 
-            Title.Text = book.Title;
-            Name.Text = book.Author;
+            BookTitle.Text = book.Title;
+            AuthorName.Text = book.Author;
             Genre.Text = book.Genre;
             Favorite.IsChecked = book.IsFavorite;
             Location.Text = book.Location;
@@ -61,13 +61,13 @@ namespace S_E_319
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(Title.Text) || Title.Text.Equals("Title"))
+            if (string.IsNullOrEmpty(BookTitle.Text) || BookTitle.Text.Equals("Title"))
             {
-                Title.Text = "Untitled";
+                BookTitle.Text = "Untitled";
             }
-            if (string.IsNullOrEmpty(Name.Text) || Name.Text.Equals("Name"))
+            if (string.IsNullOrEmpty(AuthorName.Text) || AuthorName.Text.Equals("Name"))
             {
-                Name.Text = "Unknown";
+                AuthorName.Text = "Unknown";
             }
             if (string.IsNullOrEmpty(Genre.Text) || Genre.Text.Equals("Genre"))
             {
@@ -82,8 +82,8 @@ namespace S_E_319
                 Genre.Text = "Unknown";
             }
 
-            String title = Title.Text;
-            String author = Name.Text;
+            String title = BookTitle.Text;
+            String author = AuthorName.Text;
             String genre = Genre.Text;
             String location = Location.Text;
             String description = Description.Text;
@@ -94,8 +94,8 @@ namespace S_E_319
                 book = new Book();
             }
 
-            book.Title = Title.Text;
-            book.Author = Name.Text;
+            book.Title = BookTitle.Text;
+            book.Author = AuthorName.Text;
             book.Genre = Genre.Text;
             book.Location = Location.Text;
             book.Description = Description.Text;

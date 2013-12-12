@@ -17,16 +17,21 @@ namespace S_E_319
 
         public static ObservableCollection<Book> items = new ObservableCollection<Book>();
         private static ICollectionView _itemView = CollectionViewSource.GetDefaultView(items);
-        private static string _filterString = "" ;
-        
+        private static string _filterString = "";
+
 
         public static void GenerateList()
         {
+            //public Book(string title, string author, string genre, string location, string description, string borrower, string borrowDate, bool isFavorite, bool isLoaned)
             _itemView.Filter = filter;
             items.Clear();
-            items.Add(new Book("Bible", "God", "Fantasy", "test", "test", "Random Guy", DateTime.Now.ToString(), false, false));
+            items.Add(new Book("Bible", "God", "Fantasy", "test", "test", "Random Guy", DateTime.Now.ToString(), false, true));
+            items.Add(new Book("Dracula", "Bram Stoker", "Vampire", "Home", "Classic vampire tale.", "", DateTime.Now.ToString(), true, false));
+            items.Add(new Book("Frankenstein", "Mary Shelly", "Fantasy", "Home", "Cool dead guy monster.", "", DateTime.Now.ToString(), true, false));
+            items.Add(new Book("Twilight", "not sure", "Fantasy", "Home", "Modern vampires sparkle.", "Mom", DateTime.Now.ToString(), false, true));
+            items.Add(new Book("The Time Machine", "H. G. Wells", "Sci Fi", "Apartment", "time travel, i guess?", "Steff", DateTime.Now.ToString(), false, true));
             _filterString = "";
-            
+
         }
 
         public static void readXml(string path)
@@ -79,11 +84,11 @@ namespace S_E_319
             if (_filterString.Equals(""))
                 return true;
             Book book = item as Book;
-            if(_filterString.Equals("~fav"))
+            if (_filterString.Equals("~fav"))
                 return book.IsFavorite;
-            if(_filterString.Equals("~loan"))
-                return book.IsLoaned;;
-            return book.getSearchString().ToLower().Contains( _filterString.ToLower() );
+            if (_filterString.Equals("~loan"))
+                return book.IsLoaned; ;
+            return book.getSearchString().ToLower().Contains(_filterString.ToLower());
         }
     }
 }

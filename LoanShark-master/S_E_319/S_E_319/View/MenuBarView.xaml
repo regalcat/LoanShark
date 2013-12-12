@@ -7,16 +7,20 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Menu Name="LSMenu" Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <MenuItem Header="File">
+            <MenuItem Header="Add Book" Click="AddBook" />
             <MenuItem Header="Exit" HorizontalAlignment="Left" Width="144.8" Click="Exit_Clicked"/>
 
         </MenuItem>
         <MenuItem Width="60" Header="Settings">
             <MenuItem Header="Color Schemes">
                 <!--Temporarily commenting out the click function so the program will run. Will fix after demo.-->
-                <MenuItem Header="Loanshark Original" Command="{Binding LoanShark_Click}"/><!--Click="{Binding LoanShark_Clicked}"-->
+                <MenuItem Header="Loanshark Original" Command="{Binding LoanShark_Click}"/>
+                <!--Click="{Binding LoanShark_Clicked}"-->
                 <MenuItem Header="Cyclone Pride" Command="{Binding Cyclone_Click}"/>
                 <!--Click="{Binding Cyclone_Clicked}"-->
-                
+                <MenuItem Header="'Murica" Command="{Binding Murica_Click}" />
+                <MenuItem Header="Rainforest" Command="{Binding Rainforest_Click}" />
+
             </MenuItem>
         </MenuItem>
     </Menu>

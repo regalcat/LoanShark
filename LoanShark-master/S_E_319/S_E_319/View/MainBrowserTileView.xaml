@@ -4,178 +4,118 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:S_E_319"
-             mc:Ignorable="d" Height="300" Width="300">
-
-    <Grid Background="{Binding BackgroundColor, TargetNullValue='White'}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{Binding BackgroundColor, TargetNullValue='White'}" >
         <!-- Listbox That Holds Tiles -->
         <ListBox 
             ItemsSource="{Binding Items}"
-            ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListBox_SelectionChanged">
 
             <!-- Template for wrapping -->
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel IsItemsHost="True" Orientation="Horizontal"/>
+                    <WrapPanel IsItemsHost="True" Orientation="Horizontal" >
+                        <WrapPanel.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Loan" Command="{Binding LoanCommand}" CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"/>
+                            </ContextMenu>
+                        </WrapPanel.ContextMenu>
+                    </WrapPanel>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
             <!-- Template for tiles -->
             <ListBox.ItemTemplate>
-                <!--
-                <DataTemplate DataType="{x:Type local:BookItem}">
-                    <Border Height="100" Width="200" 
+               
+                <DataTemplate >
+                        <Border Height="125" Width="200" 
                             BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock 
-                                Text="{Binding Name}"
+                            <Grid>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                     <RowDefinition/>
+                                      <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock
+                                Text="{Binding Title}"
                                 Grid.Row="0"
                                 Grid.ColumnSpan="2"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="Author: " 
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="{Binding Author}" 
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="Category"
-                                Grid.Row="2"
-                                Grid.Column="0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="{Binding Category}"
-                                Grid.Row="2"
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="Owner: "
-                                Grid.Row="3"
-                                Grid.Column="0"
-                                VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
                                 />
-                            <TextBlock 
-                                Text="Borrower: "
-                                Grid.Row="3"
+                                <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                    Text="{Binding Author}"
+                                >
+                                    <!--
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1} {2}">
+                                            <Binding Path="AuthorFirst" />
+                                            <Binding Path="AuthorMiddle" />
+                                            <Binding Path="AuthorLast" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                    -->
+                                </TextBlock>
+                                <TextBlock
+                                Text="{Binding Genre}"
+                                Grid.Row="1"
                                 Grid.Column="1"
-                                VerticalAlignment="Center"
+                                VerticalAlignment="Top"
                                 HorizontalAlignment="Left"
                                 />
-                            <TextBlock
-                                Text="{Binding Owner}"
+                                <TextBlock
+                                Text="{Binding Location}"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                />
+                                <TextBlock
+                                Text="{Binding Borrower}"
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                />
+                                <TextBlock
+                                Text="{Binding BorrowDate}"
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                />
+                                <TextBlock
+                                Text="Loaned:"
                                 Grid.Row="4"
                                 Grid.Column="0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"
                                 />
-                            <TextBlock
-                                Text="{Binding Borrower}"
+                                <TextBlock
+                                Text="{Binding IsLoaned}"
                                 Grid.Row="4"
                                 Grid.Column="1"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"
                                 />
+                            <TextBlock Grid.Row="5" Grid.Column="0" Text="Favorite:"/>
+                            <CheckBox VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" IsChecked="{Binding IsFavorite}" />
                         </Grid>
-                    </Border>
-                </DataTemplate>
-                -->
-
-                <DataTemplate>
-
-                    <Border Height="100" Width="200" 
-                            BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray" MouseLeftButtonDown="{Binding UpdateSidePanel}">
-
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Name="Title"
-                                Text="{Binding Name}"
-                                Grid.Row="0"
-                                Grid.ColumnSpan="2"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="Genre"
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock Name="Category" 
-                                Text="{Binding Category}"
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                            <TextBlock 
-                                Text="Owner: "
-                                Grid.Row="2"
-                                Grid.Column="0"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                />
-                            <TextBlock 
-                                Text="Borrower: "
-                                Grid.Row="2"
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                />
-                            <TextBlock Name="Owner"
-                                Text="{Binding Owner}"
-                                Grid.Row="3"
-                                Grid.Column="0"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Left"
-                                />
-                            <TextBlock Name="Borrower"
-                                Text="{Binding Borrower}"
-                                Grid.Row="3"
-                                Grid.Column="1"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Left"
-                                />
-                        </Grid>
-                    </Border>
+                        </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

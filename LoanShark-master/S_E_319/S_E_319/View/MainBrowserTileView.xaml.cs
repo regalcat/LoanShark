@@ -20,9 +20,14 @@ namespace S_E_319
     /// </summary>
     public partial class MainBrowserTileView : UserControl
     {
-        public MainBrowserTileView()
+        public MainBrowserTileView() 
         {
             InitializeComponent();
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

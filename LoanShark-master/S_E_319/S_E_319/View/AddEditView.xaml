@@ -8,10 +8,10 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Margin="34,39,416,262">Title</TextBlock>
-        <TextBox Margin="104,38,44,262" Text="Title" Name="Title" />
+        <TextBox Margin="104,38,44,262" Text="Title" Name="BookTitle" />
 
         <TextBlock Margin="34,76,416,225">Author</TextBlock>
-        <TextBox Margin="104,76,44,224" Text="Name" Name="Name"/>
+        <TextBox Margin="104,76,44,224" Text="Name" Name="AuthorName"/>
 
         <TextBlock Margin="34,115,416,186">Genre</TextBlock>
         <TextBox Margin="104,115,159,185" Text="Genre" Name="Genre"/>

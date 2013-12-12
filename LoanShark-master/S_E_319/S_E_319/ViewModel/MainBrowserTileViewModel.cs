@@ -9,20 +9,19 @@ using System.Windows.Input;
 
 namespace S_E_319
 {
-    class MainBrowserTileViewModel : MainBrowserViewModelBaseClass
+    class MainBrowserTileViewModel : ViewModelBase
     {
-
+        #region Fields and Autoproperties
+        
         private static ObservableCollection<Book> _items;
 
         public event EventHandler UpdateSidePanel;
 
         public event EventHandler someEvent;
 
-        public BookItem b;
-
         public ICommand LoanCommand { get; private set; }
 
-        #region Fields and Autoproperties
+        public Brush bColor;
 
         public ObservableCollection<Book> Items
         {
@@ -37,6 +36,8 @@ namespace S_E_319
         public MainBrowserTileViewModel()
         {
             LoanCommand = new RelayCommand(OnLoanCommand, CanLoanBook);
+            if (Database.items == null) { Database.GenerateList(); }
+            Items = Database.items;
         }
 
         #endregion
@@ -45,19 +46,15 @@ namespace S_E_319
 
         #endregion
 
-        public static void GenerateList()
-        {
-            _items = new ObservableCollection<Book>();
-            _items.Add(new Book("Bible", "God", "Fantasy", "Hell", "Stuff", "Random Guy", DateTime.Now.ToString(), false, false));
-        }
+        #region Methods
 
         public void UpdateSide()
         {
             var handler = UpdateSidePanel;
             if (handler != null)
             {
-                //b = new BookItem();
-                //var e = new TileClickedEventArgs(b);
+                var e = new EventArgs();
+                handler(this, e);
             }
         }
 
@@ -72,6 +69,7 @@ namespace S_E_319
 
         private void OnLoanCommand(Object o)
         {
+            
             Book b = o as Book;
             if (b == null) { return; }
             var wind = new LoanView(b);
@@ -87,18 +85,32 @@ namespace S_E_319
             }
             return false;
         }
+
+        public void ChangeColor(Brush b)
+        {
+            BackgroundColor = b;
+        }
+
+        public Brush BackgroundColor
+        {
+            get { return bColor; }
+            private set { bColor = value; OnPropertyChanged("BackgroundColor"); }
+        }
+
+        
+        #endregion
     }
 
     class TileClickedEventArgs : EventArgs
     {
-        public BookItem book { get; private set; }
+        public Book book { get; private set; }
 
-        public TileClickedEventArgs(BookItem b)
+        public TileClickedEventArgs(Book b)
         {
             book = b;
         }
     }
 
 
-       
+
 }

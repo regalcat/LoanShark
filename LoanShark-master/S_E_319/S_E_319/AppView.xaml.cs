@@ -10,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace S_E_319
 {
     /// <summary>
-    /// Interaction logic for ToolBarView.xaml
+    /// Interaction logic for AppView.xaml
     /// </summary>
-    public partial class ToolBarView : UserControl
+    public partial class AppView : Window
     {
-
-
-        public ToolBarView()
+        public AppView()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Steff\Documents\GitHub\LoanShark\LoanShark-master\S_E_319\S_E_319\App.xaml
-8-1688852628
+7-470327175
 
-29-804663250
+23-1269680161
 12-1401562060
-View\AddEditView.xaml;View\LoanView.xaml;View\MainBrowserListView.xaml;View\MainBrowserTileView.xaml;View\SidePanelView.xaml;View\ToolBarView.xaml;View\MenuBarView.xaml;View\AppView.xaml;
+View\AddEditView.xaml;AppView.xaml;View\LoanView.xaml;View\MainBrowserTileView.xaml;View\MenuBarView.xaml;View\SidePanelView.xaml;View\ToolBarView.xaml;
 
-False
+True
 
