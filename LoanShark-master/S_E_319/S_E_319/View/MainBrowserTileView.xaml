@@ -39,7 +39,7 @@
                         <Border Height="125" Width="200" 
                             BorderThickness="2" Margin="3" Padding="3" BorderBrush="Gray">
                             <Grid>
-
+                                       <!--
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
@@ -67,15 +67,6 @@
                                 HorizontalAlignment="Left"
                                     Text="{Binding Author}"
                                 >
-                                    <!--
-                                    <TextBlock.Text>
-                                        <MultiBinding StringFormat="{}{0} {1} {2}">
-                                            <Binding Path="AuthorFirst" />
-                                            <Binding Path="AuthorMiddle" />
-                                            <Binding Path="AuthorLast" />
-                                        </MultiBinding>
-                                    </TextBlock.Text>
-                                    -->
                                 </TextBlock>
                                 <TextBlock
                                 Text="{Binding Genre}"
@@ -121,6 +112,10 @@
                                 />
                             <TextBlock Grid.Row="5" Grid.Column="0" Text="Favorite:"/>
                             <CheckBox VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" IsChecked="{Binding IsFavorite}" />
+                            -->
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Title}" Margin="10,27,10,67"/>
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Author}" Margin="10,58,6,36"/>
+
                         </Grid>
                         </Border>
                 </DataTemplate>
