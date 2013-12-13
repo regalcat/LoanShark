@@ -19,6 +19,13 @@ namespace S_E_319
             var appViewModel = new AppViewModel();
             appView.DataContext = appViewModel;
             appView.Show();
+            appView.Closing += appView_Closing; 
         }
+
+        void appView_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Database.saveXml("test.xml");
+         }
+
     }
 }
