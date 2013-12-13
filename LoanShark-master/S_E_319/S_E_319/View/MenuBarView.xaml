@@ -8,8 +8,10 @@
     <Menu Name="LSMenu" Background="{Binding BackgroundColor, TargetNullValue='White'}">
         <MenuItem Header="File">
             <MenuItem Header="Add Book" Click="AddBook" />
+            <!--
             <MenuItem Header="Save" Name="TBSave" Command="{Binding SaveCommand}" />
             <MenuItem Header="Load" Name="TBLoad" Command="{Binding LoadCommand}" />
+            -->
             <MenuItem Header="Exit" HorizontalAlignment="Left" Width="144.8" Click="Exit_Clicked"/>
 
         </MenuItem>
