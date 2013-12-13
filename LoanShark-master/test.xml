@@ -1,0 +1,42 @@
+<root>
+  <book>
+    <title>Bible</title>
+    <author>God</author>
+    <genre>Fantasy</genre>
+    <location>test</location>
+    <description>test</description>
+    <borrower>Random Guy</borrower>
+    <borrowDate>12/13/2013 3:43:38 PM</borrowDate>
+    <loaned>Gimme it back!</loaned>
+  </book>
+  <book>
+    <title>Dracula</title>
+    <author>Bram Stoker</author>
+    <genre>Vampire</genre>
+    <location>Home</location>
+    <description>Classic vampire tale.</description>
+    <borrower />
+    <borrowDate>12/13/2013 3:43:38 PM</borrowDate>
+    <favorite>I like dis!</favorite>
+  </book>
+  <book>
+    <title>Frankenstein</title>
+    <author>Mary Shelly</author>
+    <genre>Fantasy</genre>
+    <location>Home</location>
+    <description>Cool dead guy monster.</description>
+    <borrower />
+    <borrowDate>12/13/2013 3:43:38 PM</borrowDate>
+    <favorite>I like dis!</favorite>
+  </book>
+  <book>
+    <title>The Time Machine</title>
+    <author>H. G. Wells</author>
+    <genre>Sci Fi</genre>
+    <location>Apartment</location>
+    <description>time travel, i guess?</description>
+    <borrower>Steff</borrower>
+    <borrowDate>12/13/2013 3:43:38 PM</borrowDate>
+    <loaned>Gimme it back!</loaned>
+  </book>
+</root>
