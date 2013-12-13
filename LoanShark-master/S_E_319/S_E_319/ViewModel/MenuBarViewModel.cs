@@ -46,7 +46,7 @@ namespace S_E_319
         {
             try
             {
-                Database.readXml("test.xml");
+                Database.readXml("./test.xml");
             }
             catch (Exception e)
             {
@@ -57,7 +57,7 @@ namespace S_E_319
         private void SaveClicked(object obj)
         {
 
-            Database.saveXml("test.xml");
+            Database.saveXml("./test.xml");
         }
 
         public void Cyclone_Clicked()
