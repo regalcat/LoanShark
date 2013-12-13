@@ -23,19 +23,29 @@ namespace S_E_319
 
         public static void GenerateList()
         {
-            //public Book(string title, string author, string genre, string location, string description, string borrower, string borrowDate, bool isFavorite, bool isLoaned)
-            _itemView.Filter = filter;
-            items.Clear();
-            items.Add(new Book("Bible", "God", "Fantasy", "test", "test", "Random Guy", DateTime.Now.ToString(), false, true));
-            items.Add(new Book("Dracula", "Bram Stoker", "Vampire", "Home", "Classic vampire tale.", "", DateTime.Now.ToString(), true, false));
-            items.Add(new Book("Frankenstein", "Mary Shelly", "Fantasy", "Home", "Cool dead guy monster.", "", DateTime.Now.ToString(), true, false));
-            items.Add(new Book("Twilight", "not sure", "Fantasy", "Home", "Modern vampires sparkle.", "Mom", DateTime.Now.ToString(), false, true));
-            items.Add(new Book("The Time Machine", "H. G. Wells", "Sci Fi", "Apartment", "time travel, i guess?", "Steff", DateTime.Now.ToString(), false, true));
-            _filterString = "";
+                         //public Book(string title, string author, string genre, string location, string description, string borrower, string borrowDate, bool isFavorite, bool isLoaned)
+            
+             _itemView.Filter = filter;
+             items.Clear();
+             _filterString = "";
+            try
+            {
+                Database.readXml("test.xml");
+            }
+            catch (Exception) 
+            {
+                items.Add(new Book("Bible", "God", "Fantasy", "test", "test", "Random Guy", DateTime.Now.ToString(), false, true));
+                items.Add(new Book("Dracula", "Bram Stoker", "Vampire", "Home", "Classic vampire tale.", "", "", true, false));
+                items.Add(new Book("Frankenstein", "Mary Shelly", "Fantasy", "Home", "Cool dead guy monster.", "", "", true, false));
+                items.Add(new Book("Twilight", "not sure", "Fantasy", "Home", "Modern vampires sparkle.", "Mom", DateTime.Now.ToString(), false, true));
+                items.Add(new Book("The Time Machine", "H. G. Wells", "Sci Fi", "Apartment", "time travel, i guess?", "Steff", DateTime.Now.ToString(), false, true));
+            }
+            
+
 
         }
 
-        public static void readXml(string path)
+        private static void readXml(string path)
         {
             _itemView.Filter = filter;
             items.Clear();
