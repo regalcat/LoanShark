@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Xml;
 using System.Windows.Controls;
+using System.Windows;
 
 namespace S_E_319
 {
@@ -54,6 +55,7 @@ namespace S_E_319
 
         public static void saveXml(string path)
         {
+
             XmlDocument doc = new XmlDocument();
             XmlNode root = doc.CreateElement("root");
             foreach (Book b in items)
@@ -62,6 +64,7 @@ namespace S_E_319
             }
             doc.AppendChild(root);
             doc.Save(path);
+
         }
 
         public static void search(String search)
