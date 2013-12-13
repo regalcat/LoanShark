@@ -48,10 +48,6 @@ namespace S_E_319
         {
             try
             {
-                Database.readXml("./test.xml");
-            }
-            catch (FileNotFoundException e)
-            {
                 Database.GenerateList();
             }
             catch (Exception e)
