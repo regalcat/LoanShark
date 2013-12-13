@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Input;
+using System.Windows;
+using System.IO;
 
 namespace S_E_319
 {
@@ -48,16 +50,37 @@ namespace S_E_319
             {
                 Database.readXml("./test.xml");
             }
-            catch (Exception e)
+            catch (FileNotFoundException e)
             {
                 Database.GenerateList();
+            }
+            catch (Exception e)
+            {
+                string messageBoxText = "An error occured while trying to load :\n" + e.Message;
+                string caption = "Load Exception";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Warning;
+
+                // Display message box
+                MessageBox.Show(messageBoxText, caption, button, icon);
             }
         }
 
         private void SaveClicked(object obj)
         {
-
+            try {
             Database.saveXml("./test.xml");
+            }
+            catch (Exception e)
+            {
+                string messageBoxText = "An error occured while trying to save :\n" + e.Message;
+                string caption = "Save Exception";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Warning;
+
+                // Display message box
+                MessageBox.Show(messageBoxText, caption, button, icon);
+            }
         }
 
         public void Cyclone_Clicked()
