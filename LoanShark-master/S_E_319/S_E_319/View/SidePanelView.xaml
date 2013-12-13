@@ -34,6 +34,22 @@
     </StackPanel>
     -->
     <Grid>
+            <Label Content="Title : " HorizontalAlignment="Left" Margin="19,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Author : " HorizontalAlignment="Left" Margin="19,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Genre : " HorizontalAlignment="Left" Margin="19,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="Borrower : " HorizontalAlignment="Left" Margin="19,97,0,0" VerticalAlignment="Top"/>
+       <Label Content="Borrow Date : " HorizontalAlignment="Left" Margin="19,123,0,0" VerticalAlignment="Top"/>
+        <Label Content="Favorite : " HorizontalAlignment="Left" Margin="19,149,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description : " HorizontalAlignment="Left" Margin="19,175,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,24,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.Title}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,50,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.Author}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,76,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.Genre}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,102,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.Borrower}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,128,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.BorrowDate}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,154,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.IsFavorite}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,180,0,0" TextWrapping="Wrap" Text="{Binding CurrentBook.Description}" VerticalAlignment="Top" RenderTransformOrigin="0.64,0.25" Width="145" Height="66"/>
+
+    
         
     </Grid>
 </UserControl>
