@@ -26,8 +26,8 @@ ____________________________________________________________________
 
 INSTALLATION:
 
-	To install, simply download the installer, click 'next', and
-	then click 'finish'. It's that easy!
+	To install, simply download the the zip, unpack it, and click on
+	the .exe. We've already got a sample library up for you!
 
 
 ____________________________________________________________________
@@ -42,18 +42,9 @@ HOW TO USE:
 			Clicking add will open a new window that
 			allows you to fill in the fields for a new
 			book, which will then be added to your library.
-
-		LOAD:
-			Load causes the program to set the current
-			list of books to whatever is in the xml file.
-			If the library has not been saved since any
-			changes have been made, this will have the effect
-			of resetting the library.
-
-		SAVE:
-			Save causes the xml file supporting the library
-			to be updated with the current version of the 
-			library. 
+			
+		EXIT:
+			Gets you out of the program.
 
 	SETTINGS MENU:
 		
